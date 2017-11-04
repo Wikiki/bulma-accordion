@@ -23,7 +23,7 @@
         display: inline-block
         flex-grow: 0
         flex-shrink: 0
-        font-size: 0
+        font-size: 1em
         height: 20px
         max-height: 20px
         max-width: 20px
@@ -36,13 +36,13 @@
         margin-left: .75em
         &::after
           color: $white
-          height: 100%
-          width: 100%
           display: block
           left: 0
           position: absolute
-          top: 0
-          content: "+"
+          top: -.1em
+          right: 0
+          bottom: 0
+          content: '\002B'
     .message-body
       text-align: initial
       height: 0
@@ -53,7 +53,7 @@
       .message-header
         .toggle
           &::after
-            content: '-'
+            content: '\002D'
       .message-body
         height: auto
         padding: 1em 1.25em
