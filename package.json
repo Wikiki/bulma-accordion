@@ -1,5 +1,5 @@
 {
-  "name": "bulma-iconpicker",
+  "name": "bulma-accordion",
   "version": "0.1.0",
   "description": "A simple accordion extension for Bulma",
   "main": "accordion.sass",
