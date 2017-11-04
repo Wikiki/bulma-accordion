@@ -1,0 +1,25 @@
+{
+  "name": "bulma-iconpicker",
+  "version": "0.1.0",
+  "description": "A simple accordion extension for Bulma",
+  "main": "accordion.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wikiki/bulma-accordion.git"
+  },
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "extensions",
+    "bulma.io"
+  ],
+  "author": "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikiki/bulma-accordion/issues"
+  },
+  "homepage": "https://github.com/Wikiki/bulma-accordion#readme"
+}
