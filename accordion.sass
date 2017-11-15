@@ -45,15 +45,22 @@
           content: '\002B'
     .message-body
       text-align: initial
-      height: 0
-      padding: 0
-      -moz-transition: height 1s ease
+      max-height: 0
+      opacity: 0
+      visibility: hidden
       overflow: hidden
+      padding: 0
+      -webkit-transition: padding 0s, max-height 0.5s ease-in-out, opacity 0.5s, visibility 0.5s
+      -moz-transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
+      -o-transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
+      transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
     &.is-active
       .message-header
         .toggle
           &::after
             content: '\002D'
       .message-body
-        height: auto
-        padding: 1em 1.25em
+        max-height: 100em
+        opacity: 1
+        visibility: visible
+        padding: $message-body-padding
