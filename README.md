@@ -8,4 +8,4 @@ A simple accordion extension for Bulma
 
 Documentation & Demo
 ---
-You can find the Documentation and a demo [here](https://wikiki.github.io/bulma-extensions/accordion)
+You can find the Documentation and a demo [here](https://wikiki.github.io/components/accordion/)
