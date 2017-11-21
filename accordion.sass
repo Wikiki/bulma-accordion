@@ -1,13 +1,72 @@
-.accordion
-  .message
+$accordion-background-color: $background !default
+$accordion-radius: $radius !default
+
+$accordion-header-background-color: $text !default
+$accordion-header-color: $text-invert !default
+$accordion-header-padding: 0.5em 0.75em !default
+$accordion-header-radius: $radius !default
+
+$accordion-body-border: 1px solid $border !default
+$accordion-body-color: $text !default
+$accordion-body-padding: 1em 1.25em !default
+$accordion-body-radius: $radius !default
+
+$accordion-body-pre-background-color: $white !default
+$accordion-body-pre-code-background-color: transparent !default
+
+.accordions
+  .accordion
+    +block
+    background-color: $accordion-background-color
+    border-radius: $accordion-radius
+    font-size: $size-normal
+    strong
+      color: currentColor
+    a:not(.button):not(.tag)
+      color: currentColor
+      text-decoration: underline
+    // Sizes
+    &.is-small
+      font-size: $size-small
+    &.is-medium
+      font-size: $size-medium
+    &.is-large
+      font-size: $size-large
+    // Colors
+    @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      $color-lightning: max((100% - lightness($color)) - 2%, 0%)
+      $color-luminance: colorLuminance($color)
+      $darken-percentage: $color-luminance * 70%
+      $desaturate-percentage: $color-luminance * 30%
+      &.is-#{$name}
+        background-color: lighten($color, $color-lightning)
+        .message-header
+          background-color: $color
+          color: $color-invert
+        .message-body
+          border-color: $color
+          color: desaturate(darken($color, $darken-percentage), $desaturate-percentage)
+
     &:not(:first-child)
-      .message-header
+      .accordion-header
         border-radius: 0
     &:not(:last-child)
       margin-bottom: 0
-      .message-body
+      .accordion-body
         border-radius: 0
-    .message-header
+
+    .accordion-header
+      align-items: center
+      background-color: $accordion-header-background-color
+      border-radius: $accordion-header-radius $accordion-header-radius 0 0
+      color: $accordion-header-color
+      display: flex
+      justify-content: space-between
+      line-height: 1.25
+      padding: $accordion-header-padding
+      position: relative
       .toggle
         -webkit-touch-callout: none
         -webkit-user-select: none
@@ -23,8 +82,9 @@
         display: inline-block
         flex-grow: 0
         flex-shrink: 0
-        font-size: 1em
+        margin-left: 0.75em
         height: 20px
+        width: 20px
         max-height: 20px
         max-width: 20px
         min-height: 20px
@@ -32,9 +92,7 @@
         outline: none
         position: relative
         vertical-align: top
-        width: 20px
-        margin-left: .75em
-        &::after
+        &::before
           color: $white
           display: block
           left: 0
@@ -43,24 +101,41 @@
           right: 0
           bottom: 0
           content: '\002B'
-    .message-body
-      text-align: initial
-      max-height: 0
-      opacity: 0
-      visibility: hidden
-      overflow: hidden
-      padding: 0
-      -webkit-transition: padding 0s, max-height 0.5s ease-in-out, opacity 0.5s, visibility 0.5s
-      -moz-transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
-      -o-transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
-      transition: padding 0s, max-height 0.5s, opacity 0.5s, visibility 0.5s
+        &::after
+          display: none
+      & + .accordion-body
+        overflow-y: hidden
+        border: $accordion-body-border
+        border-radius: $accordion-body-radius
+        code,
+        pre
+          background-color: $accordion-body-pre-background-color
+        pre code
+          background-color: $accordion-body-pre-code-background-color
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        border-top: none
+        max-height: 0
+        overflow-y: hidden
+        .accordion-content
+          display: block
+          border: 1px solid #dbdbdb
+          padding: $accordion-body-padding
+          color: $accordion-body-color
+    &:not(.is-active)
+      .accordion-body
+        -webkit-transition: max-height 0.1s ease
+        -moz-transition: max-height 0.1s ease
+        -o-transition: max-height 0.1s ease
+        transition: max-height 0.1s ease
     &.is-active
-      .message-header
+      .accordion-header
         .toggle
-          &::after
+          &::before
             content: '\002D'
-      .message-body
-        max-height: 100em
-        opacity: 1
-        visibility: visible
-        padding: $message-body-padding
+      .accordion-body
+        max-height: 1000rem
+        -webkit-transition: max-height 2s ease
+        -moz-transition: max-height 2s ease
+        -o-transition: max-height 2s ease
+        transition: max-height 2s ease
