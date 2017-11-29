@@ -1,6 +1,6 @@
 {
   "name": "bulma-accordion",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple accordion extension for Bulma",
   "main": "accordion.sass",
   "scripts": {
@@ -21,5 +21,17 @@
   "bugs": {
     "url": "https://github.com/Wikiki/bulma-accordion/issues"
   },
-  "homepage": "https://github.com/Wikiki/bulma-accordion#readme"
+  "homepage": "https://github.com/Wikiki/bulma-accordion#readme",
+  "devDependencies": {
+    "bulma": "^0.6.1"
+  },
+  "files": [
+    "accordion.sass",
+    "accordion.css",
+    "accordion.min.css",
+    "accordion.min.js",
+    "accordion.js",
+    "LICENSE",
+    "README.md"
+  ]
 }
