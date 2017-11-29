@@ -32,22 +32,6 @@ $accordion-body-pre-code-background-color: transparent !default
       font-size: $size-medium
     &.is-large
       font-size: $size-large
-    // Colors
-    @each $name, $pair in $colors
-      $color: nth($pair, 1)
-      $color-invert: nth($pair, 2)
-      $color-lightning: max((100% - lightness($color)) - 2%, 0%)
-      $color-luminance: colorLuminance($color)
-      $darken-percentage: $color-luminance * 70%
-      $desaturate-percentage: $color-luminance * 30%
-      &.is-#{$name}
-        background-color: lighten($color, $color-lightning)
-        .message-header
-          background-color: $color
-          color: $color-invert
-        .message-body
-          border-color: $color
-          color: desaturate(darken($color, $darken-percentage), $desaturate-percentage)
 
     &:not(:first-child)
       .accordion-header
@@ -139,3 +123,20 @@ $accordion-body-pre-code-background-color: transparent !default
         -moz-transition: max-height 2s ease
         -o-transition: max-height 2s ease
         transition: max-height 2s ease
+
+    // Colors
+    @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      $color-lightning: max((100% - lightness($color)) - 2%, 0%)
+      $color-luminance: colorLuminance($color)
+      $darken-percentage: $color-luminance * 70%
+      $desaturate-percentage: $color-luminance * 30%
+      &.is-#{$name}
+        background-color: lighten($color, $color-lightning)
+        .accordion-header
+          background-color: $color
+          color: $color-invert
+        .accordion-body
+          border-color: $color
+          color: desaturate(darken($color, $darken-percentage), $desaturate-percentage)
