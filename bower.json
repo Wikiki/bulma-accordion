@@ -1,0 +1,23 @@
+{
+  "name": "bulma-accordion",
+  "description": "A simple accordion extension for Bulma",
+  "main": "accordion.sass",
+  "authors": [
+    "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "extensions",
+    "bulma.io"
+  ],
+  "homepage": "https://github.com/Wikiki/bulma-accordion",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
