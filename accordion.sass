@@ -6,13 +6,14 @@ $accordion-header-color: $text-invert !default
 $accordion-header-padding: 0.5em 0.75em !default
 $accordion-header-radius: $radius !default
 
-$accordion-body-border: 1px solid $border !default
-$accordion-body-color: $text !default
-$accordion-body-padding: 1em 1.25em !default
-$accordion-body-radius: $radius !default
+$accordion-content-border: 1px solid $border !default
+$accordion-content-color: $text !default
+$accordion-content-padding-top: 1em !default
+$accordion-content-padding-left: 1.25em !default
+$accordion-content-radius: $radius !default
 
-$accordion-body-pre-background-color: $white !default
-$accordion-body-pre-code-background-color: transparent !default
+$accordion-content-pre-background-color: $white !default
+$accordion-content-pre-code-background-color: transparent !default
 
 .accordions
   .accordion
@@ -38,7 +39,7 @@ $accordion-body-pre-code-background-color: transparent !default
         border-radius: 0
     &:not(:last-child)
       margin-bottom: 0
-      .accordion-body
+      .accordion-content
         border-radius: 0
 
     .accordion-header
@@ -87,42 +88,35 @@ $accordion-body-pre-code-background-color: transparent !default
           content: '\002B'
         &::after
           display: none
-      & + .accordion-body
+      & + .accordion-content
         overflow-y: hidden
-        border: $accordion-body-border
-        border-radius: $accordion-body-radius
-        code,
-        pre
-          background-color: $accordion-body-pre-background-color
-        pre code
-          background-color: $accordion-body-pre-code-background-color
+        height: 0
+        display: block
+        padding: 0 $accordion-content-padding-left
+        color: $accordion-content-color
+        border: $accordion-content-border
+        border-radius: $accordion-content-radius
         border-top-left-radius: 0
         border-top-right-radius: 0
         border-top: none
-        max-height: 0
-        overflow-y: hidden
-        .accordion-content
-          display: block
-          border: 1px solid #dbdbdb
-          padding: $accordion-body-padding
-          color: $accordion-body-color
-    &:not(.is-active)
-      .accordion-body
-        -webkit-transition: max-height 0.1s ease
-        -moz-transition: max-height 0.1s ease
-        -o-transition: max-height 0.1s ease
-        transition: max-height 0.1s ease
+        -webkit-transition: all .2s ease
+        -moz-transition: all .2s ease
+        -o-transition: all .2s ease
+        transition: all .2s ease
+        code,
+        pre
+          background-color: $accordion-content-pre-background-color
+        pre code
+          background-color: $accordion-content-pre-code-background-color
     &.is-active
       .accordion-header
         .toggle
           &::before
             content: '\002D'
-      .accordion-body
-        max-height: 1000rem
-        -webkit-transition: max-height 2s ease
-        -moz-transition: max-height 2s ease
-        -o-transition: max-height 2s ease
-        transition: max-height 2s ease
+      .accordion-content
+        height: auto
+        padding-top: $accordion-content-padding-top
+        padding-bottom: $accordion-content-padding-top
 
     // Colors
     @each $name, $pair in $colors
@@ -137,6 +131,6 @@ $accordion-body-pre-code-background-color: transparent !default
         .accordion-header
           background-color: $color
           color: $color-invert
-        .accordion-body
+        .accordion-content
           border-color: $color
           color: desaturate(darken($color, $darken-percentage), $desaturate-percentage)

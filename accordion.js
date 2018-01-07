@@ -13,6 +13,8 @@ if (accordions) {
               activeItem.classList.remove('is-active');
             }
             currentItem.classList.add('is-active');
+          } else {
+            currentItem.classList.remove('is-active');
           }
         });
       });
