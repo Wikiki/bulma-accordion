@@ -18,6 +18,8 @@ $accordion-content-pre-code-background-color: transparent !default
 .accordions
   .accordion
     +block
+    display: flex
+    flex-direction: column
     background-color: $accordion-background-color
     border-radius: $accordion-radius
     font-size: $size-normal
@@ -88,35 +90,33 @@ $accordion-content-pre-code-background-color: transparent !default
           content: '\002B'
         &::after
           display: none
-      & + .accordion-content
+      & + .accordion-body
         overflow-y: hidden
-        height: 0
-        display: block
-        padding: 0 $accordion-content-padding-left
+        max-height: 0
         color: $accordion-content-color
         border: $accordion-content-border
         border-radius: $accordion-content-radius
         border-top-left-radius: 0
         border-top-right-radius: 0
         border-top: none
-        -webkit-transition: all .2s ease
-        -moz-transition: all .2s ease
-        -o-transition: all .2s ease
-        transition: all .2s ease
-        code,
-        pre
-          background-color: $accordion-content-pre-background-color
-        pre code
-          background-color: $accordion-content-pre-code-background-color
+        -webkit-transition: max-height .2s ease
+        -moz-transition: max-height .2s ease
+        -o-transition: max-height .2s ease
+        transition: max-height .2s ease
+        .accordion-content
+          padding: $accordion-content-padding-top $accordion-content-padding-left
+          code,
+          pre
+            background-color: $accordion-content-pre-background-color
+          pre code
+            background-color: $accordion-content-pre-code-background-color
     &.is-active
       .accordion-header
         .toggle
           &::before
             content: '\002D'
-      .accordion-content
-        height: auto
-        padding-top: $accordion-content-padding-top
-        padding-bottom: $accordion-content-padding-top
+      .accordion-body
+        max-height: 100em
 
     // Colors
     @each $name, $pair in $colors
