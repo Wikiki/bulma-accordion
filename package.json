@@ -1,6 +1,6 @@
 {
   "name": "bulma-accordion",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "description": "A simple accordion extension for Bulma",
   "main": "accordion.sass",
   "scripts": {
