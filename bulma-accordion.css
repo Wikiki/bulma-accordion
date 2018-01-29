@@ -8,6 +8,8 @@
 }
 
 .accordions .accordion {
+  display: flex;
+  flex-direction: column;
   background-color: whitesmoke;
   border-radius: 3px;
   font-size: 1rem;
@@ -46,8 +48,13 @@
   margin-bottom: 0;
 }
 
-.accordions .accordion:not(:last-child) .accordion-body {
+.accordions .accordion:not(:last-child) .accordion-content {
   border-radius: 0;
+}
+
+.accordions .accordion .toggle,
+.accordions .accordion [data-action="toggle"] {
+  cursor: pointer;
 }
 
 .accordions .accordion .accordion-header {
@@ -73,7 +80,6 @@
   background-color: rgba(10, 10, 10, 0.2);
   border: none;
   border-radius: 290486px;
-  cursor: pointer;
   display: inline-block;
   flex-grow: 0;
   flex-shrink: 0;
@@ -106,36 +112,30 @@
 
 .accordions .accordion .accordion-header + .accordion-body {
   overflow-y: hidden;
+  max-height: 0;
+  color: #4a4a4a;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  max-height: 0;
-  overflow-y: hidden;
-}
-
-.accordions .accordion .accordion-header + .accordion-body code,
-.accordions .accordion .accordion-header + .accordion-body pre {
-  background-color: white;
-}
-
-.accordions .accordion .accordion-header + .accordion-body pre code {
-  background-color: transparent;
+  -webkit-transition: max-height .2s ease;
+  -moz-transition: max-height .2s ease;
+  -o-transition: max-height .2s ease;
+  transition: max-height .2s ease;
 }
 
 .accordions .accordion .accordion-header + .accordion-body .accordion-content {
-  display: block;
-  border: 1px solid #dbdbdb;
   padding: 1em 1.25em;
-  color: #4a4a4a;
 }
 
-.accordions .accordion:not(.is-active) .accordion-body {
-  -webkit-transition: max-height 0.1s ease;
-  -moz-transition: max-height 0.1s ease;
-  -o-transition: max-height 0.1s ease;
-  transition: max-height 0.1s ease;
+.accordions .accordion .accordion-header + .accordion-body .accordion-content code,
+.accordions .accordion .accordion-header + .accordion-body .accordion-content pre {
+  background-color: white;
+}
+
+.accordions .accordion .accordion-header + .accordion-body .accordion-content pre code {
+  background-color: transparent;
 }
 
 .accordions .accordion.is-active .accordion-header .toggle::before {
@@ -143,11 +143,7 @@
 }
 
 .accordions .accordion.is-active .accordion-body {
-  max-height: 1000rem;
-  -webkit-transition: max-height 2s ease;
-  -moz-transition: max-height 2s ease;
-  -o-transition: max-height 2s ease;
-  transition: max-height 2s ease;
+  max-height: 100em;
 }
 
 .accordions .accordion.is-white {
@@ -159,7 +155,7 @@
   color: #0a0a0a;
 }
 
-.accordions .accordion.is-white .accordion-body {
+.accordions .accordion.is-white .accordion-content {
   border-color: white;
   color: #4d4d4d;
 }
@@ -173,7 +169,7 @@
   color: white;
 }
 
-.accordions .accordion.is-black .accordion-body {
+.accordions .accordion.is-black .accordion-content {
   border-color: #0a0a0a;
   color: #090909;
 }
@@ -187,7 +183,7 @@
   color: #363636;
 }
 
-.accordions .accordion.is-light .accordion-body {
+.accordions .accordion.is-light .accordion-content {
   border-color: whitesmoke;
   color: #505050;
 }
@@ -201,7 +197,7 @@
   color: whitesmoke;
 }
 
-.accordions .accordion.is-dark .accordion-body {
+.accordions .accordion.is-dark .accordion-content {
   border-color: #363636;
   color: #2a2a2a;
 }
@@ -215,7 +211,7 @@
   color: #fff;
 }
 
-.accordions .accordion.is-primary .accordion-body {
+.accordions .accordion.is-primary .accordion-content {
   border-color: #00d1b2;
   color: #021310;
 }
@@ -229,7 +225,7 @@
   color: #fff;
 }
 
-.accordions .accordion.is-link .accordion-body {
+.accordions .accordion.is-link .accordion-content {
   border-color: #3273dc;
   color: #22509a;
 }
@@ -243,7 +239,7 @@
   color: #fff;
 }
 
-.accordions .accordion.is-info .accordion-body {
+.accordions .accordion.is-info .accordion-content {
   border-color: #209cee;
   color: #12537e;
 }
@@ -257,7 +253,7 @@
   color: #fff;
 }
 
-.accordions .accordion.is-success .accordion-body {
+.accordions .accordion.is-success .accordion-content {
   border-color: #23d160;
   color: #0e301a;
 }
@@ -271,7 +267,7 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
-.accordions .accordion.is-warning .accordion-body {
+.accordions .accordion.is-warning .accordion-content {
   border-color: #ffdd57;
   color: #3b3108;
 }
@@ -285,7 +281,7 @@
   color: #fff;
 }
 
-.accordions .accordion.is-danger .accordion-body {
+.accordions .accordion.is-danger .accordion-content {
   border-color: #ff3860;
   color: #cd0930;
 }
