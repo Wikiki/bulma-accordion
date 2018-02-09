@@ -1,3 +1,14 @@
+<a name="0.2.7"></a>
+## [0.2.7](https://github.com/Wikiki/bulma-accordion/compare/v0.1.4...v0.2.7) (2018-02-09)
+
+
+### Features
+
+* **gulp:** Add gulp dependencies ([9afde4e](https://github.com/Wikiki/bulma-accordion/commit/9afde4e))
+* **gulp:** Add release task ([363051c](https://github.com/Wikiki/bulma-accordion/commit/363051c))
+
+
+
 # Change Log
 
 ## [Unreleased](https://github.com/wikiki/bulma-accordion/tree/HEAD)
