@@ -1,3 +1,15 @@
+<a name="0.2.8"></a>
+## [0.2.8](https://github.com/Wikiki/bulma-accordion/compare/0.2.7...0.2.8) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Correct dist filenames ([c5df327](https://github.com/Wikiki/bulma-accordion/commit/c5df327))
+* **package:** Correct file paths ([f215a91](https://github.com/Wikiki/bulma-accordion/commit/f215a91))
+* **travis:** Remove configuration ([1d28400](https://github.com/Wikiki/bulma-accordion/commit/1d28400))
+
+
+
 <a name="0.2.7"></a>
 ## [0.2.7](https://github.com/Wikiki/bulma-accordion/compare/v0.1.4...v0.2.7) (2018-02-09)
 
