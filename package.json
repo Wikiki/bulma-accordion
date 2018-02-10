@@ -2,7 +2,7 @@
   "name": "bulma-accordion",
   "version": "0.2.7",
   "description": "A simple accordion extension for Bulma",
-  "main": "accordion.sass",
+  "main": "dist/bulma-accordion.sass",
   "scripts": {
     "build": "gulp"
   },
@@ -44,10 +44,10 @@
     "run-sequence": "^2.2.1"
   },
   "files": [
-    "dist/accordion.sass",
+    "dist/bulma-accordion.sass",
     "dist/bulma-accordion.min.css",
-    "dist/accordion.min.js",
-    "dist/accordion.js",
+    "dist/bulma-accordion.min.js",
+    "dist/bulma-accordion.js",
     "LICENSE",
     "README.md"
   ]
