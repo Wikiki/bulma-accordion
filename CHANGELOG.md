@@ -1,3 +1,14 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Wikiki/bulma-accordion/compare/0.2.10...1.0.0) (2018-02-10)
+
+
+### Features
+
+* **gulp:** Add Rollup within scripts build task ([2aac3bc](https://github.com/Wikiki/bulma-accordion/commit/2aac3bc))
+* **package:** Add rollup dependencies ([3e3ef77](https://github.com/Wikiki/bulma-accordion/commit/3e3ef77))
+
+
+
 <a name="0.2.10"></a>
 ## [0.2.10](https://github.com/Wikiki/bulma-accordion/compare/0.2.9...0.2.10) (2018-02-10)
 
