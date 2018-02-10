@@ -1,3 +1,8 @@
+<a name="0.2.10"></a>
+## [0.2.10](https://github.com/Wikiki/bulma-accordion/compare/0.2.9...0.2.10) (2018-02-10)
+
+
+
 <a name="0.2.9"></a>
 ## [0.2.9](https://github.com/Wikiki/bulma-accordion/compare/0.2.8...0.2.9) (2018-02-10)
 
