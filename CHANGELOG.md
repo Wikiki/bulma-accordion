@@ -1,3 +1,13 @@
+<a name="0.2.9"></a>
+## [0.2.9](https://github.com/Wikiki/bulma-accordion/compare/0.2.8...0.2.9) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Use UMD modules style ([a4f0fd4](https://github.com/Wikiki/bulma-accordion/commit/a4f0fd4))
+
+
+
 <a name="0.2.8"></a>
 ## [0.2.8](https://github.com/Wikiki/bulma-accordion/compare/0.2.7...0.2.8) (2018-02-10)
 
