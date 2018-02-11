@@ -1,12 +1,36 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Wikiki/bulma-accordion/compare/0.2.10...1.0.0) (2018-02-10)
+
+
+### Features
+
+* **gulp:** Add Rollup within scripts build task ([2aac3bc](https://github.com/Wikiki/bulma-accordion/commit/2aac3bc))
+* **package:** Add rollup dependencies ([3e3ef77](https://github.com/Wikiki/bulma-accordion/commit/3e3ef77))
+
+
+
+<a name="0.2.10"></a>
+## [0.2.10](https://github.com/Wikiki/bulma-accordion/compare/0.2.9...0.2.10) (2018-02-10)
+
+
+
+<a name="0.2.9"></a>
+## [0.2.9](https://github.com/Wikiki/bulma-accordion/compare/0.2.8...0.2.9) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Use UMD modules style ([a4f0fd4](https://github.com/Wikiki/bulma-accordion/commit/a4f0fd4))
+
+
+
 <a name="0.2.8"></a>
-## [0.2.8](https://github.com/Wikiki/bulma-accordion/compare/0.2.7...0.2.8) (2018-02-11)
+## [0.2.8](https://github.com/Wikiki/bulma-accordion/compare/0.2.7...0.2.8) (2018-02-10)
 
 
 ### Bug Fixes
 
 * **gulp:** Correct dist filenames ([c5df327](https://github.com/Wikiki/bulma-accordion/commit/c5df327))
-* **gulp:** Remove Bulma’s important from dist’sass ([3616cf8](https://github.com/Wikiki/bulma-accordion/commit/3616cf8))
-* **gulp:** Use UMD modules style ([a4f0fd4](https://github.com/Wikiki/bulma-accordion/commit/a4f0fd4))
 * **package:** Correct file paths ([f215a91](https://github.com/Wikiki/bulma-accordion/commit/f215a91))
 * **travis:** Remove configuration ([1d28400](https://github.com/Wikiki/bulma-accordion/commit/1d28400))
 
