@@ -91,25 +91,9 @@ gulp.task('build:scripts', function() {
     .pipe(sourcemaps.init({
       loadMaps: true
     }))
-    .pipe(rollup({
-        plugins: [babel({
-          babelrc: false,
-          sourceMaps: true,
-          exclude: 'node_modules/**',
-          presets: [
-            ["@babel/preset-env",  {
-              "modules": false,
-              "targets": {
-                "browsers": gutil.env.babelTarget ? gutil.env.babelTarget : ["last 2 versions"]
-              }
-            }]
-          ]
-        })]
-      }, {
-        format: gutil.env.jsFormat ? gutil.env.jsFormat : 'iife',
-        name: camelCase(package.name)
-      }
-    ))
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
     .pipe(concat(globalJsFile))
     .pipe(gulp.dest(paths.dest))
     .pipe(concat(distJsFile))
