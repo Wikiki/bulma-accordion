@@ -63,10 +63,8 @@
     }
   },
   "files": [
-    "dist/css/bulma-accordion.sass",
-    "dist/css/bulma-accordion.min.css",
-    "dist/js/bulma-accordion.min.js",
-    "dist/js/bulma-accordion.js",
+    "dist/**",
+    "src/**",
     "LICENSE",
     "README.md"
   ]
