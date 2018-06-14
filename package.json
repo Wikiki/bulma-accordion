@@ -1,6 +1,6 @@
 {
   "name": "bulma-accordion",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A simple accordion extension for Bulma",
   "main": "./dist/js/bulma-accordion.min.js",
   "style": "./dist/bulma-accordion.min.css",
@@ -47,6 +47,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
+    "gulp-nop": "0.0.3",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
