@@ -84,13 +84,16 @@ $accordion-content-pre-code-background-color: transparent !default
         vertical-align: top
         &::before
           color: $white
-          display: block
+          display: flex
           left: 0
           position: absolute
-          top: -.1em
+          top: 0
           right: 0
           bottom: 0
           content: '\002B'
+          line-height: 0;
+          justify-content: center;
+          align-items: center;
         &::after
           display: none
       & + .accordion-body
