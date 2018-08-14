@@ -133,7 +133,7 @@ var bulmaAccordion = function (_EventEmitter) {
      * @return {void}
      */
     value: function init() {
-      this.items = this.element.querySelectorAll('.accordion') || [];
+      this.items = this.element.querySelectorAll('.accordion .toggle') || [];
 
       this._bindEvents();
     }
