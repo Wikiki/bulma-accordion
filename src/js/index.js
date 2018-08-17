@@ -44,7 +44,7 @@ export default class bulmaAccordion extends EventEmitter {
    * @return {void}
    */
   init() {
-    this.items = this.element.querySelectorAll('.accordion') || [];
+    this.items = this.element.querySelectorAll('.accordion .toggle') || [];
 
     this._bindEvents();
   }
