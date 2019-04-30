@@ -1,3 +1,5 @@
+## Package is abandoned in favor of http://github.com/creativebulma/bulma-collapsible
+
 # bulma-accordion
 A simple accordion extension for Bulma
 (find all my bulma's extensions [here](https://wikiki.github.io/))
